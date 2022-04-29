@@ -4,7 +4,7 @@ setup(
     name='src',
     packages=find_packages(),
     version='0.1.0',
-    description='A short description of the project.',
+    description='To predict the level of damage to buildings caused by the 2015 Gorkha earthquake in Nepal.',
     author='Madhuri Sakhare',
     license='MIT',
 )

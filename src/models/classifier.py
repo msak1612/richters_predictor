@@ -1,5 +1,6 @@
 from pycaret.classification import setup
 from pycaret.classification import create_model
+from pycaret.classification import finalize_model
 
 # Create classfier class for baseline model/tuned model creation
 class Classifier:
@@ -49,3 +50,7 @@ class Classifier:
                             num_leaves=90,
                             reg_alpha=3,
                             reg_lambda=0.2)
+
+    # Finalize the model with splitted train and test data
+    def finalize(self, model):
+       return finalize_model(model)

@@ -1,6 +1,8 @@
 from pycaret.classification import predict_model
 
 
+# Predicts Target & Score (probability of predicted class) using a trained model,
+# then save the prediction in csv file.
 def predict_and_store_result(model, data):
     pred = predict_model(model, data=data, raw_score=True, verbose=False)
     building_id = pred['building_id']

@@ -1,7 +1,7 @@
 from pycaret.classification import setup
 from pycaret.classification import create_model
 
-
+# Create classfier class for baseline model/tuned model creation
 class Classifier:
 
     def __init__(self, df) -> None:
@@ -34,10 +34,12 @@ class Classifier:
                              'geo_level_3_id'
                          ],
                          ignore_features=['building_id'])
-
+    
+    # Create baseline model 
     def create_baseline_model(self):
         return create_model('lightgbm')
 
+    # Create tuned model with hyperparameters   
     def create_tuned_model(self):
         # Based on https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html,
         # the model is tuned for its hyperparameters.
